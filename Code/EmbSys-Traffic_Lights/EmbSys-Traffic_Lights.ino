@@ -17,12 +17,6 @@ void setup() {
 }
 
 void loop() {
-  // digitalWrite(GREEN, HIGH);
-  // digitalWrite(YELLOW, HIGH);
-  // digitalWrite(RED, HIGH);
-  // digitalWrite(pRED, HIGH);
-  // digitalWrite(pGREEN, HIGH);
-
   // vehicle traffic lights
   if(buttonState == LOW){
     digitalWrite(pRED, HIGH);
@@ -48,10 +42,10 @@ void loop() {
     delay(10000);
     digitalWrite(pGREEN, LOW);
     digitalWrite(pRED, HIGH);
-    for (int i=0; i <10; i++) {
-      delay(1000);
+    for (int i=0; i <50; i++) {
+      delay(100);
       digitalWrite(pRED, LOW);
-      delay(1000);
+      delay(100);
       digitalWrite(pRED, HIGH);
     }
     buttonState = digitalRead(BUTTON);
